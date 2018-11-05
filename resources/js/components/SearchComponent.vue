@@ -8,12 +8,28 @@
 
         <ul>
             <li v-for="(hotel, id) in hotels">
-                <!--<span class="btn btn-dark">hotel.pref_name</span>-->
+                <span class="badge badge-primary">{{hotel.pref_name}}</span>
                 <router-link :to="{name:'Detail', params:{id}}">{{hotel.name}}</router-link>
             </li>
         </ul>
     </div>
 </template>
+
+<style lang="scss" scoped>
+    ul {
+        list-style: none;
+        padding: 0;
+        li {
+            border: 1px solid #CCC;
+            padding: 20px;
+            a {
+                display: block;
+                width: 100%;
+                font-size: 1.5rem;
+            }
+        }
+    }
+</style>
 
 <script>
   const AreasComponent = require('./AreasComponent');
