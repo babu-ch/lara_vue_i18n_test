@@ -2,9 +2,13 @@
 require('./bootstrap');
 
 import VueRouter from 'vue-router';
+import VueCookie from 'vue-cookie';
 
 window.Vue = require('vue');
 Vue.use(VueRouter);
+Vue.use(VueCookie);
+
+Vue.component('switch-langage', require('./components/SwitchLanguageComponent'));
 
 const router = new VueRouter({
   mode: 'history',

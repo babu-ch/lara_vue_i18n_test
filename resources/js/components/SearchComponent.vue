@@ -1,8 +1,8 @@
 <template>
     <div>
-        <h1>
+        <p>
             これは検索ページです
-        </h1>
+        </p>
         <nav aria-label="パンくずリスト" class="mb-2">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item" aria-current="page">
