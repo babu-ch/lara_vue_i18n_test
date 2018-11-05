@@ -30,13 +30,23 @@
         searchUrl: '',
       }
     },
+    watch: {
+      lang: function () {
+        this.fetch()
+      }
+    },
     mounted() {
-      const params = this.$route.params
-      const id = params.id
-      axios.get('/api/detail/' + id).then((response) => {
-        this.hotel = response.data;
-        this.searchUrl = '/search/' + this.hotel.pref_name
-      })
+        this.fetch()
+    },
+    methods: {
+      fetch() {
+        const params = this.$route.params
+        const id = params.id
+        axios.get('/api/detail/' + id).then((response) => {
+          this.hotel = response.data;
+          this.searchUrl = '/search/' + this.hotel.pref_name
+        })
+      }
     }
   }
 </script>

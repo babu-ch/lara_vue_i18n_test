@@ -30,6 +30,8 @@
         li {
             border: 1px solid #CCC;
             padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 10px;
             a {
                 display: block;
                 width: 100%;
@@ -54,6 +56,9 @@
     },
     watch: {
       '$route'(to, from) {
+        this.fetch()
+      },
+      lang: function() {
         this.fetch()
       }
     },
