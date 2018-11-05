@@ -18,9 +18,22 @@ class ApiController extends Controller
         ['name' => '妙なホテル', 'pref_name' => 'tokyo', 'description' => '妙な雰囲気のホテル'],
     ];
 
+    private $enRecords = [
+        ['name' => 'Nankuru Hotel', 'pref_name' => 'okinawa', 'description' => 'A hotel representative of Okinawa.'],
+        ['name' => 'Sam Hotel', 'pref_name' => 'okinawa', 'description' => 'A man who created the floor of Don Quijote'],
+        ['name' => 'Samugyopusaru', 'pref_name' => 'okinawa', 'description' => 'Delicious food'],
+        ['name' => 'Sapporo Hotel', 'pref_name' => 'hokkaido', 'description' => 'A hotel representative of Sapporo.'],
+        ['name' => 'Kani Hotel', 'pref_name' => 'hokkaido', 'description' => 'A delicious crab comes out hotel'],
+        ['name' => 'Jingisu kan', 'pref_name' => 'hokkaido', 'description' => 'Delicious food'],
+        ['name' => 'Tokyo Saitama Hotel', 'pref_name' => 'tokyo', 'description' => 'Actually, Hotel in Saitama'],
+        ['name' => 'Tokyo Wanwan Hotel', 'pref_name' => 'tokyo', 'description' => 'Hotel managed by Shimmy'],
+        ['name' => 'Myo na Hotel', 'pref_name' => 'tokyo', 'description' => 'A strange atmosphere hotel'],
+    ];
+
     public function __construct()
     {
         $this->records = collect($this->records);
+        $this->enRecords = collect($this->enRecords);
     }
 
 
