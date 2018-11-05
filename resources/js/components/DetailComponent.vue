@@ -3,6 +3,17 @@
         <h1>
             これは詳細ページです
         </h1>
+        <nav aria-label="パンくずリスト" class="mb-2">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <router-link to="/">ホーム</router-link>
+                </li>
+                <li class="breadcrumb-item">
+                    <router-link :to="searchUrl">{{hotel.pref_name}}</router-link>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">{{hotel.name}}</li>
+            </ol>
+        </nav>
         <h2>{{hotel.name}}</h2>
         <div>
             {{hotel.description}}
@@ -13,15 +24,17 @@
 <script>
   export default {
     data() {
-        return {
-          hotel: {}
-        }
+      return {
+        hotel: {},
+        searchUrl: '',
+      }
     },
     mounted() {
       const params = this.$route.params
       const id = params.id
       axios.get('/api/detail/' + id).then((response) => {
         this.hotel = response.data;
+        this.searchUrl = '/search/' + this.hotel.pref_name
       })
     }
   }

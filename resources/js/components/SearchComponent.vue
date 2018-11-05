@@ -3,6 +3,14 @@
         <h1>
             これは検索ページです
         </h1>
+        <nav aria-label="パンくずリスト" class="mb-2">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item" aria-current="page">
+                    <router-link to="/">ホーム</router-link>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">{{prefName}}</li>
+            </ol>
+        </nav>
         <h2>エリアを変える</h2>
         <areas></areas>
 
@@ -36,7 +44,8 @@
   export default {
     data() {
       return {
-        hotels: []
+        hotels: [],
+        prefName: ''
       }
     },
     components: {
@@ -51,6 +60,7 @@
       fetch() {
         const params = this.$route.params
         const prefName = params.pref
+        this.prefName = prefName
         axios.get('/api/search/' + prefName).then((response) => {
           this.hotels = response.data
         })
