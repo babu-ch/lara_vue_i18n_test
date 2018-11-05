@@ -7,18 +7,17 @@ window.Vue = require('vue');
 Vue.use(VueRouter);
 
 
-const Foo = { template: '<div>foo</div>'}
-
 const router = new VueRouter({
-  routers: [
-    {path:'/', component: Foo}
+  mode: 'history',
+  routes: [
+    {path:'/', component: require('./components/TopComponent')},
+    {path:'/search/:pref', component: require('./components/SearchComponent')},
+    {path:'/detail/:id', component: require('./components/DetailComponent')},
   ]
 });
 
-
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
-
 const app = new Vue({
-  el: '#app',
   router
 });
+
+app.$mount('#app');
