@@ -19,6 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('search/{pref_name}', 'ApiController@search');
-Route::get('detail/{id}', 'ApiController@detail');
+Route::get('search/{pref_name}', 'ApiController@search')->where('pref_name', 'tokyo|okinawa|hokkaido|all');
+Route::get('detail/{id}', 'ApiController@detail')->where('id', '\d+');
 

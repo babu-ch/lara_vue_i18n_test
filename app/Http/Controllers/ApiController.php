@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+
 class ApiController extends Controller
 {
     private $records = [
@@ -16,18 +18,28 @@ class ApiController extends Controller
         ['name' => '妙なホテル', 'pref_name' => 'tokyo', 'description' => '妙な雰囲気のホテル'],
     ];
 
-
-    public function search()
+    public function __construct()
     {
-        return [
-            'wei',
-        ];
+        $this->records = collect($this->records);
     }
 
-    public function detail()
-    {
-        return [
 
-        ];
+    public function search($prefName)
+    {
+        if ($prefName == 'all') {
+            return $this->records;
+        }
+        return $this->records->filter(function ($hotel) use ($prefName) {
+            return $prefName == $hotel['pref_name'];
+        });
+    }
+
+    public function detail($id)
+    {
+        $hotel = $this->records->get($id);
+        if (!$hotel) {
+            throw new NotFoundHttpException('OMG');
+        }
+        return $hotel;
     }
 }
