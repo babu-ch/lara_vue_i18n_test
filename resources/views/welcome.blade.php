@@ -84,6 +84,7 @@
                         <li><a href="/change/en">ENGLISH</a></li>
                         <li><a href="/change/jp">JAPANESE</a></li>
                         <li><a href="/change/ru">RUSSIAN</a></li>
+                        <li><a href="/change/delete">RESET LANG SETTING</a></li>
                     </ul>
                 </div>
             </div>

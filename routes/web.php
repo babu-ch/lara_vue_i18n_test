@@ -11,14 +11,22 @@
 |
 */
 
+use Illuminate\Support\Facades\Session;
+
 Route::get('/', function () {
     if ($lang = Session::get('locale')) {
         App::setLocale($lang);
+    } else {
+        // TODO locale header
     }
     return view('welcome');
 });
 
 Route::get('/change/{lang}', function ($lang) {
-    Session::put('locale', $lang);
+    if ($lang == 'delete') {
+        Session::forget('locale');
+    } else {
+        Session::put('locale', $lang);
+    }
     return redirect('/');
-})->where('lang', 'en|jp|ru');
+})->where('lang', 'en|jp|ru|delete');
