@@ -11,7 +11,7 @@ const router = new VueRouter({
   routes: [
     {path:'/', component: require('./components/TopComponent')},
     {path:'/search/:pref', component: require('./components/SearchComponent')},
-    {path:'/detail/:id', component: require('./components/DetailComponent')},
+    {path:'/detail/:id', component: require('./components/DetailComponent'), name:'Detail'},
   ]
 });
 
