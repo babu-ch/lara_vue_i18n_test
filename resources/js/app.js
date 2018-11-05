@@ -10,6 +10,12 @@ Vue.use(VueRouter)
 Vue.use(VueCookie)
 Vue.use(VueI18n)
 
+const i18n = new VueI18n({
+  messages: require('./language.json')
+});
+
+
+
 Vue.component('switch-langage', require('./components/SwitchLanguageComponent'));
 
 const router = new VueRouter({
@@ -23,10 +29,19 @@ const router = new VueRouter({
 
 const app = new Vue({
   router,
+  i18n,
   data() {
     return {
       lang: this.$cookie.get('lang')
     }
+  },
+  watch: {
+    lang() {
+      this.$i18n.locale = this.lang
+    }
+  },
+  mounted() {
+    this.$i18n.locale = this.lang
   }
 })
 

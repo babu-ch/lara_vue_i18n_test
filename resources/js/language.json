@@ -1,0 +1,14 @@
+{
+  "ja": {
+    "message": {
+      "title": "タイトルだよーん",
+      "subtitle": "ここがサブタイトルになります"
+    }
+  },
+  "en": {
+    "message": {
+      "title": "title dayo-n",
+      "subtitle": "sub title dayo-n"
+    }
+  }
+}

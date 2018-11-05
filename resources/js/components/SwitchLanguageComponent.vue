@@ -1,7 +1,7 @@
 <template>
     <div>
         げんごきりかえ
-        <span class="btn btn-primary" @click="langTo('jp')">JP</span>
+        <span class="btn btn-primary" @click="langTo('ja')">JP</span>
         <span class="btn btn-primary" @click="langTo('en')">EN</span>
     </div>
 </template>
@@ -20,7 +20,6 @@
       langTo: function (lang) {
         this.$cookie.set('lang', lang)
         this.$parent.lang = lang
-        console.log('set to lang' + lang)
       }
     }
   };
