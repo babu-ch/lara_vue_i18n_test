@@ -1,8 +1,8 @@
 <template>
     <div>
         げんごきりかえ
-        <span class="btn btn-primary">JP</span>
-        <span class="btn btn-primary">EN</span>
+        <span class="btn btn-primary" @click="langTo('jp')">JP</span>
+        <span class="btn btn-primary" @click="langTo('en')">EN</span>
     </div>
 </template>
 
@@ -16,7 +16,10 @@
 
 <script>
   export default {
-    mounted() {
+    methods: {
+      langTo: function (lang) {
+        this.$cookie.set('lang', lang)
+      }
     }
   };
 </script>

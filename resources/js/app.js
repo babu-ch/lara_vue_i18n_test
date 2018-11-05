@@ -7,6 +7,7 @@ import VueCookie from 'vue-cookie';
 window.Vue = require('vue');
 Vue.use(VueRouter);
 Vue.use(VueCookie);
+// console.log(VueCookie);
 
 Vue.component('switch-langage', require('./components/SwitchLanguageComponent'));
 
@@ -20,7 +21,7 @@ const router = new VueRouter({
 });
 
 const app = new Vue({
-  router
+  router,
 });
 
 app.$mount('#app');
