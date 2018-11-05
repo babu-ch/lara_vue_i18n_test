@@ -22,13 +22,22 @@
             height: 100vh;
             margin: 20px;
         }
+
         #app {
             width: 800px;
             margin: auto;
+            padding: 10px;
         }
+
+        @media screen and (max-width: 800px) {
+            #app {
+                width: 100%;
+            }
+        }
+
         h1 {
             border-bottom: 1px solid #CCC;
-            padding: 10px;
+            padding-bottom: 10px;
         }
 
     </style>
