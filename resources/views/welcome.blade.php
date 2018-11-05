@@ -61,15 +61,7 @@
 <body>
 <div class="flex-center position-ref full-height">
     <div id="app" class="content">
-        <div>
-            <h4>
-                ここはトップページです
-            </h4>
-        </div>
-
-        <div class="mt-5">
-            <a href="/search/all">検索画面へ</a>
-        </div>
+        <router-view></router-view>
 
         <div class="mt-5">
             <h4>CHANGE LOCALE</h4>
@@ -80,6 +72,6 @@
         </div>
     </div>
 </div>
-<script src="{{ asset('/js/app.js') }}"></script>
+<script src="{{ mix('/js/app.js') }}"></script>
 </body>
 </html>
