@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Cookie;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class ApiController extends Controller
@@ -34,6 +35,10 @@ class ApiController extends Controller
     {
         $this->records = collect($this->records);
         $this->enRecords = collect($this->enRecords);
+        $lang = Cookie::get('lang', 'jp');
+        if ($lang == 'en') {
+            $this->records = $this->enRecords;
+        }
     }
 
 
