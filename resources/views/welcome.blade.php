@@ -60,8 +60,7 @@
 </head>
 <body>
 <div class="flex-center position-ref full-height">
-
-    <div class="content">
+    <div id="app" class="content">
         <div>
             <h4>
                 ここはトップページです
@@ -81,5 +80,6 @@
         </div>
     </div>
 </div>
+<script src="{{ asset('/js/app.js') }}"></script>
 </body>
 </html>
