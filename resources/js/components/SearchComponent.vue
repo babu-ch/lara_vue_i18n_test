@@ -42,6 +42,7 @@
 <script>
   const AreasComponent = require('./AreasComponent');
   export default {
+    props: ['lang'],
     data() {
       return {
         hotels: [],

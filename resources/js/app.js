@@ -22,6 +22,11 @@ const router = new VueRouter({
 
 const app = new Vue({
   router,
+  data() {
+    return {
+      lang: 'jp'
+    }
+  }
 });
 
 app.$mount('#app');

@@ -46,7 +46,7 @@
 <div class="flex-center position-ref full-height">
     <div id="app" class="content">
         <switch-langage></switch-langage>
-        <router-view></router-view>
+        <router-view :lang="lang"></router-view>
     </div>
 </div>
 <script src="{{ mix('/js/app.js') }}"></script>

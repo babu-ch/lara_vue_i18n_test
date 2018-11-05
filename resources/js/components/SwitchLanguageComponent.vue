@@ -19,6 +19,7 @@
     methods: {
       langTo: function (lang) {
         this.$cookie.set('lang', lang)
+        this.$parent.lang = lang
       }
     }
   };

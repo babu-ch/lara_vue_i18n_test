@@ -23,6 +23,7 @@
 
 <script>
   export default {
+    props: ['lang'],
     data() {
       return {
         hotel: {},
