@@ -1,7 +1,7 @@
 <template>
     <div>
         <p>
-            {{$t('/detail.page_description', {hotel_name: hotel.name})}}
+            {{$t('message.page_description', {hotel_name: hotel.name})}}
         </p>
         <nav aria-label="パンくずリスト" class="mb-2">
             <ol class="breadcrumb">
