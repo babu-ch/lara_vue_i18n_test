@@ -61,10 +61,4 @@ class ApiController extends Controller
         }
         return $hotel;
     }
-
-    public function getLanguageJson(Request $request)
-    {
-        $path = $request->input('path');
-        return config('languages.' . $path, []);
-    }
 }
