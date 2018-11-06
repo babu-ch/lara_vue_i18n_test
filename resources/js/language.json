@@ -1,12 +1,18 @@
 {
   "ja": {
-    "message": {
-      "welcome": "私のホムページへようこそ"
+    "common": {
+      "welcome": "私のホムページへようこそ",
+      "top_page": "トップページ",
+      "search_page": "施設検索ページ",
+      "detail_page": "施設詳細ページ"
     }
   },
   "en": {
-    "message": {
-      "welcome": "Welcome to my HomePage!!!"
+    "common": {
+      "welcome": "Welcome to my HomePage!!!",
+      "top_page": "TopPage",
+      "search_page": "SearchPage",
+      "detail_page": "HotelDetailPage"
     }
   }
 }
