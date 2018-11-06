@@ -11,15 +11,12 @@
     data: function () {
       return {
         searchUrls: [
-          {url:'/search/all', name: 'ぜんぶ'},
-          {url:'/search/hokkaido', name: 'ほっかいど'},
-          {url:'/search/tokyo', name: 'とうきょう'},
-          {url:'/search/okinawa', name: 'おきなわ'},
+          {url:'/search/all', name: 'All'},
+          {url:'/search/hokkaido', name: 'Hokkaido'},
+          {url:'/search/tokyo', name: 'Tokyo'},
+          {url:'/search/okinawa', name: 'Okinawa'},
         ],
       }
-    },
-    mounted() {
-      console.log('Component mounted.')
     }
   }
 </script>
