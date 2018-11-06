@@ -1,12 +1,12 @@
 <template>
     <div>
         <p>
-            これは詳細ページです
+            {{$t('/detail.page_description')}}
         </p>
         <nav aria-label="パンくずリスト" class="mb-2">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <router-link to="/">ホーム</router-link>
+                    <router-link to="/">{{$t('common.top_page')}}</router-link>
                 </li>
                 <li class="breadcrumb-item">
                     <router-link :to="searchUrl">{{hotel.pref_name}}</router-link>

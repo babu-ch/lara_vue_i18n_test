@@ -1,16 +1,18 @@
 <template>
     <div>
         <p>
-            これはトップページです
+            {{$t('/.page_description')}}
         </p>
         <nav aria-label="パンくずリスト" class="mb-2">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <router-link to="/">ホーム</router-link>
+                    <router-link to="/">{{$t('common.top_page')}}</router-link>
                 </li>
             </ol>
         </nav>
-        <h2>検索画面に行く！</h2>
+        <h2>
+            {{$t('/.to_search_page')}}
+        </h2>
 
         <areas></areas>
     </div>
