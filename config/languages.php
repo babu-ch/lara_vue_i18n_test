@@ -15,4 +15,28 @@ return [
             ]
         ]
     ],
+    '/search' => [
+        'ja' => [
+            '/search' => [
+                'page_description' => 'ここは{pref_name}の検索ページですYO',
+            ]
+        ],
+        'en' => [
+            '/search' => [
+                'page_description' => 'Here is {pref_name} search page',
+            ]
+        ]
+    ],
+    '/detail' => [
+        'ja' => [
+            '/detail' => [
+                'page_description' => 'ここは{hotel_name}の詳細ページ',
+            ]
+        ],
+        'en' => [
+            '/detail' => [
+                'page_description' => 'Here is {hotel_name} detail page',
+            ]
+        ]
+    ],
 ];
