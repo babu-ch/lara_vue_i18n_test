@@ -6,10 +6,10 @@
         <nav aria-label="パンくずリスト" class="mb-2">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <router-link to="/">{{$t('common.top_page')}}</router-link>
+                    <router-link to="/" append>{{$t('common.top_page')}}</router-link>
                 </li>
                 <li class="breadcrumb-item">
-                    <router-link :to="searchUrl">{{hotel.pref_name}}</router-link>
+                    <router-link :to="searchUrl" append>{{hotel.pref_name}}</router-link>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">{{hotel.name}}</li>
             </ol>

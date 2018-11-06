@@ -6,7 +6,7 @@
         <nav aria-label="パンくずリスト" class="mb-2">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item" aria-current="page">
-                    <router-link to="/">{{$t('common.top_page')}}</router-link>
+                    <router-link to="/" append>{{$t('common.top_page')}}</router-link>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">{{prefName}}</li>
             </ol>
@@ -17,7 +17,7 @@
         <ul>
             <li v-for="(hotel, id) in hotels">
                 <span class="badge badge-primary">{{hotel.pref_name}}</span>
-                <router-link :to="{name:'Detail', params:{id}}">{{hotel.name}}</router-link>
+                <router-link :to="{name:'Detail', params:{id}}" append>{{hotel.name}}</router-link>
             </li>
         </ul>
     </div>
