@@ -1,14 +1,12 @@
 {
   "ja": {
     "message": {
-      "title": "タイトルだよーん",
-      "subtitle": "ここがサブタイトルになります"
+      "welcome": "私のホムページへようこそ"
     }
   },
   "en": {
     "message": {
-      "title": "title dayo-n",
-      "subtitle": "sub title dayo-n"
+      "welcome": "Welcome to my HomePage!!!"
     }
   }
 }
