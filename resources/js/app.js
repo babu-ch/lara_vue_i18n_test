@@ -23,7 +23,8 @@ const router = new VueRouter({
     {path: '/', component: require('./components/TopComponent')},
     {path: '/search/:pref', component: require('./components/SearchComponent')},
     {path: '/detail/:id', component: require('./components/DetailComponent'), name: 'Detail'},
-  ]
+  ],
+  base: APP_ROOT_URL
 })
 
 const app = new Vue({
