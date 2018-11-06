@@ -49,6 +49,6 @@
         <router-view :lang="lang"></router-view>
     </div>
 </div>
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{env('APP_URL')}}/js/app.js"></script>
 </body>
 </html>
