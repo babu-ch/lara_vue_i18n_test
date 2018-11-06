@@ -1,7 +1,7 @@
 <template>
     <div>
         <p>
-            {{$t('/search.page_description', {pref_name: prefName})}}
+            {{$t('message.page_description', {pref_name: prefName})}}
         </p>
         <nav aria-label="パンくずリスト" class="mb-2">
             <ol class="breadcrumb">
@@ -11,7 +11,7 @@
                 <li class="breadcrumb-item active" aria-current="page">{{prefName}}</li>
             </ol>
         </nav>
-        <h2>{{$t('/search.change_area')}}</h2>
+        <h2>{{$t('message.change_area')}}</h2>
         <areas></areas>
 
         <ul>
@@ -74,6 +74,22 @@
     },
     mounted() {
       this.fetch()
+    },
+    i18n: {
+      messages: {
+        en: {
+          message: {
+            page_description: 'Here is {pref_name} SearchPage!',
+            change_area: 'Change area!!',
+          }
+        },
+        ja: {
+          message: {
+            page_description: 'ここは{pref_name}の検索ページですよ',
+            change_area: 'エリアを変える！！',
+          }
+        }
+      }
     }
   }
 </script>

@@ -9,12 +9,10 @@ window.Vue = require('vue')
 Vue.use(VueRouter)
 Vue.use(VueCookie)
 Vue.use(VueI18n)
-// Vue.use(Vuex)
 
 const i18n = new VueI18n({
   messages: require('./language.json')
 });
-
 
 Vue.component('switch-langage', require('./components/SwitchLanguageComponent'));
 
@@ -38,38 +36,11 @@ const app = new Vue({
   watch: {
     lang() {
       this.$i18n.locale = this.lang
-    },
-    '$route'(to, from) {
-      const path = to.path
-      this.fetchLocale(path)
-    },
+    }
   },
   mounted() {
     this.$i18n.locale = this.lang
-    this.fetchLocale(this.$route.fullPath)
   },
-  methods :{
-    getPathParam(path) {
-      if (path.includes('/search')) {
-        return '/search'
-      } else if (path.includes('/detail')) {
-        return '/detail'
-      }
-      return path
-    },
-    fetchLocale(path) {
-      const pathParam = this.getPathParam(path)
-      if (this.$i18n.messages.ja[path]) {
-        return
-      }
-      axios.get('/api/language?path=' + pathParam).then((response) => {
-        _.each(response.data, (langValue, langKey) => {
-          this.$i18n.mergeLocaleMessage(langKey, langValue);
-        })
-        console.log(pathParam + ':loaded')
-      });
-    }
-  }
 })
 
 app.$mount('#app')

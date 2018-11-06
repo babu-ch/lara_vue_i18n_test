@@ -47,6 +47,20 @@
           this.searchUrl = '/search/' + this.hotel.pref_name
         })
       }
+    },
+    i18n: {
+      messages: {
+        en: {
+          message: {
+            page_description: 'Here is {hotel_name} DetailPage!',
+          }
+        },
+        ja: {
+          message: {
+            page_description: 'ここは{hotel_name}の詳細ページです！',
+          }
+        }
+      }
     }
   }
 </script>
