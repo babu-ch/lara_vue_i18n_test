@@ -1,18 +1,17 @@
 <template>
     <div>
         <p>
-            これは検索ページです
-            {{$t('message.welcome')}}
+            {{$t('/search.page_description', {pref_name: prefName})}}
         </p>
         <nav aria-label="パンくずリスト" class="mb-2">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item" aria-current="page">
-                    <router-link to="/">ホーム</router-link>
+                    <router-link to="/">{{$t('common.top_page')}}</router-link>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">{{prefName}}</li>
             </ol>
         </nav>
-        <h2>エリアを変える</h2>
+        <h2>{{$t('/search.change_area')}}</h2>
         <areas></areas>
 
         <ul>

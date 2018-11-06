@@ -19,11 +19,13 @@ return [
         'ja' => [
             '/search' => [
                 'page_description' => 'ここは{pref_name}の検索ページですYO',
+                "change_area" => "エリアを変える！"
             ]
         ],
         'en' => [
             '/search' => [
                 'page_description' => 'Here is {pref_name} search page',
+                "change_area" => "change area!"
             ]
         ]
     ],
