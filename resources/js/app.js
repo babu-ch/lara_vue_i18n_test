@@ -58,15 +58,15 @@ const app = new Vue({
       return path
     },
     fetchLocale(path) {
-      let pathParam = this.getPathParam(path)
-      if (this.$i18n.messages[path]) {
+      const pathParam = this.getPathParam(path)
+      if (this.$i18n.messages.ja[path]) {
         return
       }
       axios.get('/api/language?path=' + pathParam).then((response) => {
         _.each(response.data, (langValue, langKey) => {
-          // this.$i18n.messages[langKey][pathParam] = langValue[pathParam]
           this.$i18n.mergeLocaleMessage(langKey, langValue);
         })
+        console.log(pathParam + ':loaded')
       });
     }
   }
