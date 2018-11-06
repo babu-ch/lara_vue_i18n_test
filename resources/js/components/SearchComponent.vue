@@ -67,7 +67,7 @@
         const params = this.$route.params
         const prefName = params.pref
         this.prefName = prefName
-        axios.get('/api/search/' + prefName).then((response) => {
+        axios.get(APP_ROOT_URL + '/api/search/' + prefName).then((response) => {
           this.hotels = response.data
         })
       }

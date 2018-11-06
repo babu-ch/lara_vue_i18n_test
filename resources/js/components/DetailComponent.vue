@@ -42,7 +42,7 @@
       fetch() {
         const params = this.$route.params
         const id = params.id
-        axios.get('/api/detail/' + id).then((response) => {
+        axios.get(APP_ROOT_URL + '/api/detail/' + id).then((response) => {
           this.hotel = response.data;
           this.searchUrl = '/search/' + this.hotel.pref_name
         })
