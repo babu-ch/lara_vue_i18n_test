@@ -6,7 +6,7 @@
         <nav aria-label="パンくずリスト" class="mb-2">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <router-link to="/" append>{{$t('common.top_page')}}</router-link>
+                    <router-link to="/">{{$t('common.top_page')}}</router-link>
                 </li>
             </ol>
         </nav>

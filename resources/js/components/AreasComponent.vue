@@ -1,7 +1,7 @@
 <template>
     <div>
         <span v-for="url in searchUrls">
-            <router-link :to="url.url" class="ml-3 mb-3 btn btn-primary" append>{{url.name}}</router-link>
+            <router-link :to="url.url" class="ml-3 mb-3 btn btn-primary">{{url.name}}</router-link>
         </span>
     </div>
 </template>
