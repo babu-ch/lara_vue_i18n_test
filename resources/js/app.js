@@ -1,4 +1,3 @@
-
 require('./bootstrap')
 
 import VueRouter from 'vue-router'
@@ -17,15 +16,14 @@ const i18n = new VueI18n({
 });
 
 
-
 Vue.component('switch-langage', require('./components/SwitchLanguageComponent'));
 
 const router = new VueRouter({
   mode: 'history',
   routes: [
-    {path:'/', component: require('./components/TopComponent')},
-    {path:'/search/:pref', component: require('./components/SearchComponent')},
-    {path:'/detail/:id', component: require('./components/DetailComponent'), name:'Detail'},
+    {path: '/', component: require('./components/TopComponent')},
+    {path: '/search/:pref', component: require('./components/SearchComponent')},
+    {path: '/detail/:id', component: require('./components/DetailComponent'), name: 'Detail'},
   ]
 })
 
@@ -40,7 +38,10 @@ const app = new Vue({
   watch: {
     lang() {
       this.$i18n.locale = this.lang
-    }
+    },
+    '$route'(to, from) {
+      console.log(this.$i18n.messages)
+    },
   },
   mounted() {
     this.$i18n.locale = this.lang

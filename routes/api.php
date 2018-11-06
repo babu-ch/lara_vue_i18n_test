@@ -21,4 +21,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('search/{pref_name}', 'ApiController@search')->where('pref_name', 'tokyo|okinawa|hokkaido|all');
 Route::get('detail/{id}', 'ApiController@detail')->where('id', '\d+');
+Route::get('language', 'ApiController@getLanguageJson');
 

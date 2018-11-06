@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
@@ -59,5 +60,11 @@ class ApiController extends Controller
             throw new NotFoundHttpException('OMG');
         }
         return $hotel;
+    }
+
+    public function getLanguageJson(Request $request)
+    {
+        $path = $request->input('path');
+        return config('languages.' . $path, []);
     }
 }
