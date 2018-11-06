@@ -4,13 +4,13 @@ require('./bootstrap')
 import VueRouter from 'vue-router'
 import VueCookie from 'vue-cookie'
 import VueI18n from 'vue-i18n'
-import Vuex from 'vuex'
+// import Vuex from 'vuex'
 
 window.Vue = require('vue')
 Vue.use(VueRouter)
 Vue.use(VueCookie)
 Vue.use(VueI18n)
-Vue.use(Vuex)
+// Vue.use(Vuex)
 
 const i18n = new VueI18n({
   messages: require('./language.json')

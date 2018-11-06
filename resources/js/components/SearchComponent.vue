@@ -2,7 +2,7 @@
     <div>
         <p>
             これは検索ページです
-            {{$t('message.title')}}
+            {{$t('message.welcome')}}
         </p>
         <nav aria-label="パンくずリスト" class="mb-2">
             <ol class="breadcrumb">
