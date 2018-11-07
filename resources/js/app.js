@@ -41,7 +41,10 @@ const app = new Vue({
     }
   },
   mounted() {
-    this.$i18n.locale = this.lang
+    if (this.lang !== 'ja' && this.lang !== 'en') {
+      this.lang = 'ja'
+    }
+    this.$i18n.locale = this.lang;
   },
 })
 
