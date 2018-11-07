@@ -11,8 +11,7 @@ Vue.use(VueCookie)
 Vue.use(VueI18n)
 
 const i18n = new VueI18n({
-  messages: require('./language.json'),
-  sync: false,
+  messages: require('./language.json')
 });
 
 Vue.component('switch-langage', require('./components/SwitchLanguageComponent'));
